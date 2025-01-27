@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правила</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px rgba(118, 179, 252, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(118, 179, 252, 1);
+            }
+            100% {
+                box-shadow: 0 0 10px rgba(118, 179, 252, 0.5);
+            }
+        }
+
+        @keyframes pageFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f;
+            color: #ffffff;
+            animation: pageFadeIn 1.5s ease-in-out;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #2b2b3d;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            text-align: center;
+            color: #76b3fc;
+            animation: glow 2s infinite ease-in-out;
+        }
+
+        .section {
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 4px solid #76b3fc;
+            background-color: #252534;
+            border-radius: 4px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .section:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        .section:nth-child(even) {
+            animation-delay: 0.4s;
+        }
+
+        .section h2 {
+            margin: 0 0 10px 0;
+            color: #d7d7e0;
+        }
+
+        .section p {
+            margin: 5px 0;
+        }
+
+        .rules {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+
+        .rules strong {
+            color: #76b3fc;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Правила Модерации\Администрации</h1>
+        <div class="section">
+            <h2>1.0 Мут</h2>
+            <p class="rules"><strong>Мут без уважаемой причины:</strong> Предупреждение, в следующий раз снятие.</p>
+        </div>
+        <div class="section">
+            <h2>1.1 Бан</h2>
+            <p class="rules"><strong>Бан без уважаемой причины:</strong> Предупреждение, в следующий раз снятие.</p>
+        </div>
+        <div class="section">
+            <h2>1.2 Кик</h2>
+            <p class="rules"><strong>Кик с сервера без уважительных причин:</strong> Первые три раза прощаем, после чего снятие.</p>
+        </div>
+
+        <h1>Правила Для Участников</h1>
+        <div class="section">
+            <h2>1.0</h2>
+            <p class="rules"><strong>Запрещена Реклама:</strong><br>
+                1 раз - 10 минут Мут<br>
+                2 раз - 30 минут Мут<br>
+                3 раз - Час мута<br>
+                4 раз - Бан на день.</p>
+        </div>
+        <div class="section">
+            <h2>1.1</h2>
+            <p class="rules"><strong>Запрещен любой NSFW контент в непредназначенных каналах (Есть исключения):</strong><br>
+                1 раз - Отсутствует<br>
+                2 раз - Мут от 1 минуты до 10 минут.</p>
+        </div>
+        <div class="section">
+            <h2>1.2</h2>
+            <p class="rules"><strong>Спам, повторение одних и тех же сообщений для засора чата:</strong><br>
+                Мут от 1 до 20 минут в зависимости от ущерба.</p>
+        </div>
+        <div class="section" hide=true>
+            <h2>1.3</h2>
+            <p class="rules"><strong>Нельзя Нельзя можно.</strong></p>
+        </div>
+        <div class="section">
+            <h2>1.4</h2>
+            <p class="rules"><strong>Дискриминация по Этническому, Расовому происхождению и гендеру:</strong><br>
+                1 раз - Отсутствует<br>
+                2 раз - Мут 1 Час<br>
+                3 раз - Бан на день.</p>
+        </div>
+    </div>
+</body>
+</html>
